@@ -1,0 +1,15 @@
+extends ../layout 
+
+block content 
+
+    h1= title
+    table.table 
+        thead
+            tr
+                th NAME
+                th PRICE
+        tbody
+            each MyBooks in Books
+                tr 
+                    td=Books.NAME
+                    td=Books.PRICE
