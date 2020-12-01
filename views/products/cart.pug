@@ -1,0 +1,29 @@
+extends ../layout
+
+block content 
+    h1 Add your books to Cart
+    - var total=0
+    table(class="table") 
+        thead 
+            tr  
+                th Book Name
+                th Book Price
+                th City
+                th Location
+                th More Details
+                th Actions
+        each item in cart
+            - total += Number(item.price)
+            tbody
+                tr
+                    td=item.name        
+                    td=item.price
+                    td=item.city
+                    td=item.location
+                    td=item.detail
+                    td
+                        a(href="cart/remove/"+item._id ,class="btn btn-danger") Remove
+        tfoot
+            tr
+                th Total        
+                th=total          
