@@ -40,7 +40,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 mongoose
-  .connect("mongodb://localhost/MYBooksscrud", {
+  .connect("mongodb://localhost/bookscrud", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
